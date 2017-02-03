@@ -4,8 +4,8 @@ import { remote } from 'electron';
 import FormattedCaps from './FormattedCaps';
 import SessionStyles from '../Session.css';
 const {dialog} = remote;
-const FormItem = Form.Item;
-const Option = Select.Option;
+const {Item:FormItem} = Form;
+const {Option} = Select;
 
 export default class NewSessionForm extends Component {
 
