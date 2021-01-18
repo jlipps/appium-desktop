@@ -1,17 +1,16 @@
 {
-  "name": "appium-desktop-util",
+  "name": "appium-desktop-monorepo",
   "version": "0.0.1",
-  "description": "Utilities for Appium Desktop build",
+  "description": "Appium Desktop Monorepo",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/appium/appium-desktop.git"
   },
   "author": {
     "name": "Appium Developers",
-    "email": "",
     "url": "https://github.com/appium"
   },
-  "license": "APACHE2",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/appium/appium-desktop/issues"
   },
@@ -30,6 +29,7 @@
     "test:integration": "npm run test:server:integration && npm run test:inspector:integration",
     "test:unit": "npm run test:server:unit && npm run test:inspector:unit",
     "test:lint": "npm run test:server:lint && npm run test:inspector:lint",
+    "e2e": "npm run e2e:inspector && npm run e2e:server",
     "e2e:inspector": "cross-env E2E_TIMEOUT=600000 NODE_ENV=test RUNNING_IN_SPECTRON=true mocha --reporter mocha-multi-reporters --reporter-options configFile=./inspector/test/mochareporters.json ./inspector/test/e2e",
     "e2e:server": "cross-env E2E_TIMEOUT=600000 NODE_ENV=test RUNNING_IN_SPECTRON=true mocha --reporter mocha-multi-reporters --reporter-options configFile=./server/test/mochareporters.json ./server/test/e2e",
     "build": "run-s build:*",
@@ -58,11 +58,11 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.12.1",
     "@babel/register": "^7.4.0",
-    "appium-support": "^2.49.0",
+    "appium-support": "^2.50.0",
     "asyncbox": "^2.6.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "bluebird": "^3.7.2",
-    "cross-env": "^7.0.0",
+    "cross-env": "^7.0.3",
     "cssnano": "^4.1.10",
     "eslint": "^6.0.0",
     "eslint-config-appium": "^4.5.0",
